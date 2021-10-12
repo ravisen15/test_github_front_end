@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-do
 class App extends Component {
   render() {
     return (
+
       <Router>
         <div className="App">
         <header className="App-header">

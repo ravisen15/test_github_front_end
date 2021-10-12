@@ -39,7 +39,7 @@ jobs:
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: terraform plan
-	  
+
     - name: Terraform Apply
      # if: github.ref == 'refs/heads/development' && github.event_name == 'push'
       run: terraform apply -auto-approve
@@ -52,6 +52,6 @@ jobs:
 
     - name: Build
       run: npm run build
-		
+
     - name: Deploy app build to S3 bucket
       run: aws s3 sync ./dist/ s3://test-react-github

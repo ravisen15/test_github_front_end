@@ -31,6 +31,14 @@ resource "aws_s3_bucket" "react_bucket" {
     }
 }
 
+terraform {
+  backend "s3" {
+    bucket = "tf-state-for-infra-backend"
+    key    = "state/FE/terraform.tfstate"
+    region = "ap-south-1"
+  }
+}
+
 output "website_domain" {
     value = "${aws_s3_bucket.react_bucket.website_domain}"
 }

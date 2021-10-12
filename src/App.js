@@ -7,10 +7,8 @@ import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-do
 
 class App extends Component {
   render() {
-    console.log("Host URL"+process.env.PUBLIC_URL);
     return (
-
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
